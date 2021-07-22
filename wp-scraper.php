@@ -1461,7 +1461,7 @@ function wp_scraper_multi_scrape_action(){
 	
 	if(isset($data['limit'])) {
 		$limit = $data['limit'];
-		$limited = true;
+		$limited = false;
 	} else $limited = false;
 	
 	if($data['ThisUrl'] == 'sliced') {

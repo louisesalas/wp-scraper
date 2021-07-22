@@ -29,7 +29,7 @@ jQuery(document).ready(function($) {
 				var completeUrls = 0;
 				var next_limit = $('input[name=limit]').val();
 				var index = 0;
-				if (next_limit < 500) {
+			
 					var sliced = false;
 					$.each(url_array, function(key, id) {
 						if($.trim(id) == 'sliced') {
@@ -85,12 +85,7 @@ jQuery(document).ready(function($) {
 						index++;
 						}
 					});
-				} else {
-					$('.wpsf-form').hide('slow');
-					if(!$('#wpsf-scraper-results > #message').length) {
-						$('#wpsf-scraper-results').prepend('<div id="message" class="updated notice"><p>You are limited to 10 posts or pages with the multiple scraper. <a href="http://wpscraper.com/purchase/">You can upgrade to WP Scraper Pro to unlock unlimited posts or pages.</a></p><p>If you permanently delete the posts you have already created, you can use the multiple scraper for another ten posts. To permanently delete posts, you must also empty your trash.</p></div>');	
-					}
-				}
+				
 			},
             dataType: 'json'
         });
